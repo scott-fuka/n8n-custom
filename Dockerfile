@@ -6,7 +6,7 @@ USER root
 RUN apk add --no-cache python3 py3-pip
 
 # instalar libs python
-RUN pip3 install \
+RUN pip3 install --break-system-packages \
 numpy \
 pandas \
 requests \
