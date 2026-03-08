@@ -11,8 +11,7 @@ numpy \
 pandas \
 requests \
 beautifulsoup4 \
-lxml \
-scikit-learn
+lxml
 
 # instalar libs node globais
 RUN npm install -g \
