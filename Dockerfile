@@ -2,6 +2,7 @@ FROM n8nio/n8n:2.10.4
 
 USER root
 
+
 RUN ARCH=$(uname -m) && \
     wget -qO- "http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/${ARCH}/" | \
     grep -o 'href="apk-tools-static-[^"]*\.apk"' | head -1 | cut -d'"' -f2 | \
@@ -43,5 +44,9 @@ RUN npm install -g \
     zod \
     p-limit \
     bottleneck
+
+
+RUN npm install pdf-parse
+
 
 USER node
